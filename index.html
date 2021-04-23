@@ -1,22 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/normalize.css">
     <link rel="stylesheet" href="/css/style.css">
-    <!--Incluir para efecto zoom en imagen-->
-    <script src="/src/jquery.min.js"></script>
+
     <script type=text/javascript src="/src/index.js"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Aclonica&display=swap" rel="stylesheet">
     <title>Anime</title>
 </head>
+</head>
 <body>
   <div class='container'>
-    <h2 class='overletter'>Animes</h2>
-    <p class='overjapan'>アニメ</p>
+    <div class="title">
+      <h2 class='overletter'>Animes</h2>
+      <p class='overjapan'>アニメ</p>
+    </div>
+    <div class="menucont">
+        <ul class="nav">
+          <li><a href="#" >Search Anime</a></li>
+          <li><a href="#">Genero</a>
+            <ul>
+              <li><a href="#">Action</a>
+              <li><a href="#">Adventure</a>
+              <li><a href="#">Fantasy</a>
+              <li><a href="#">Magic</a>
+              <li><a href="#">Thriller</a>
+            </ul>
+          </li>
+          <li><a href="#">Tipo</a>
+            <ul>
+              <li><a href="#">Tv</a>
+              <li><a href="#">Ova</a>
+              <li><a href="#">Movie</a>
+              <li><a href="#">Special</a>
+              <li><a href="#">Music</a>
+            </ul>
+          </li>
+          <li><a href="#">Score</a></li>
+        </ul> 
+    </div>  
+  
+
     <div class='searchForm'>
         <form id='searchanime'>
           <input id='search' type='text' name='search'>
