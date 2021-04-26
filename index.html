@@ -2,15 +2,18 @@
 <html lang="en">
 <head>
   <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8">  
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/normalize.css">
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"  crossorigin="anonymous">
 
-    <script type=text/javascript src="/src/index.js"></script>
+    <script type=text/javascript src="./src/index.js"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Aclonica&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital@1&display=swap" rel="stylesheet">
     <title>Anime</title>
 </head>
 </head>
@@ -22,44 +25,65 @@
     </div>
     <div class="menucont">
         <ul class="nav">
-          <li><a href="#" >Search Anime</a></li>
-          <li><a href="#">Genero</a>
+          <li><a href="#" id="animeSear" >Anime</a></li>
+          <li><a href="#" id="gender">Gender</a>
             <ul>
-              <li><a href="#">Action</a>
-              <li><a href="#">Adventure</a>
-              <li><a href="#">Fantasy</a>
-              <li><a href="#">Magic</a>
-              <li><a href="#">Thriller</a>
+              <li><a href="#" id="Action">Action</a></li>
+              <li><a href="#" id="Adventure">Adventure</a></li>
+              <li><a href="#" id="Fantasy">Fantasy</a></li>
+              <li><a href="#" id="Magic">Magic</a></li>
+              <li><a href="#" id="Thriller">Thriller</a></li>
             </ul>
           </li>
-          <li><a href="#">Tipo</a>
+          <li><a href="#" id="type">Type</a>
             <ul>
-              <li><a href="#">Tv</a>
-              <li><a href="#">Ova</a>
-              <li><a href="#">Movie</a>
-              <li><a href="#">Special</a>
-              <li><a href="#">Music</a>
+              <li><a href="#" id="Tv">Tv</a></li>
+              <li><a href="#" id="Ova">Ova</a></li>
+              <li><a href="#" id="Movie">Movie</a></li>
+              <li><a href="#" id="Special">Special</a></li>
+              <li><a href="#" id="Music">Music</a></li>
             </ul>
           </li>
-          <li><a href="#">Score</a></li>
+          <li><a href="#" id="score">Score</a>
+            <ul>
+              <li><a href="#" id="sc1">1</a></li>
+              <li><a href="#" id="sc2">2</a></li>
+              <li><a href="#" id="sc3">3</a></li>
+              <li><a href="#" id="sc4">4</a></li>
+              <li><a href="#" id="sc5">5</a></li>
+              <li><a href="#" id="sc6">6</a></li>
+              <li><a href="#" id="sc7">7</a></li>
+              <li><a href="#" id="sc8">8</a></li>
+              <li><a href="#" id="sc9">9</a></li>
+            </ul>
+          </li>
         </ul> 
     </div>  
-  
 
-    <div class='searchForm'>
-        <form id='searchanime'>
-          <input id='search' type='text' name='search'>
-          <input type='submit' name='Search' id='searchBut' value="Search Anime">
-        </form>
-    </div>
+  <div>
+      <form id="senAnime" class="aniform">
+        <div class='searchform'>
+          <input type="text" placeholder="Anime" id="nAnime" name='search' required/>
+        </div>
+        <button id='searchBut'>Submit</button>
+    </form>
+  </div>
+
+
+   <!--Display Category Name-->
     <div class="nameDiv">
       <h1 id="nameAnime" class='name'></h1>
+      <h1 id="ultIndex" class='hid'></h1>
     </div>
     <div id="dispAnime" class="across">
      <!--Despliegue de data desde JS-->
     </div>
+    <div id="arrows" class="bothArrows">
+        <div><i id="arrowLeft" class="fas fa-arrow-circle-left arrow"></i></div> 
+        <div><i id="arrowRight" class="fas fa-arrow-circle-right arrow"></i></div>
+    </div>
+    
   </div>
-
 
 </body>
 </html>
