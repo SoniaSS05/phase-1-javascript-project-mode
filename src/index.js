@@ -1,5 +1,14 @@
 document.addEventListener('DOMContentLoaded', function(){
 
+    // Global
+   
+    let obtData= new Array();
+    const arrowL = document.getElementById('arrowLeft');
+    arrowL.style.visibility = 'hidden';
+    const arrowR = document.getElementById('arrowRight');
+    arrowR.style.visibility = 'hidden';   
+
+
     function obtain(nameAni, classifi, firInd, lasInd){
        const url = `https://api.jikan.moe/v3/search/anime?${classifi}=${nameAni}`;
        const answer = fetch(url,{
@@ -34,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function(){
     function showAnimePag(nameArr){
         eraseChild();
         const seldiv = document.querySelector('#dispAnime');
-        (nameArr).map((newName,index)=>{
+        (nameArr).forEach((newName,index)=>{
             const divImgH2 = document.createElement('div');
             const imgAni = document.createElement('img');
             divImgH2.style.margin = "5px 18px 5px 18px";
@@ -52,6 +61,7 @@ document.addEventListener('DOMContentLoaded', function(){
         })
     }
 
+  
 
     function eraseChild(){
         let element1 = document.getElementById("dispAnime");
@@ -73,16 +83,7 @@ document.addEventListener('DOMContentLoaded', function(){
         nAni.innerHTML=senAnimeOne.value;
         obtain(senAnimeOne.value,'q',0,8);
     })
-
-
-
-    // Global
-   
-    let obtData= new Array();
-    const arrowL = document.getElementById('arrowLeft');
-    arrowL.style.visibility = 'hidden';
-    const arrowR = document.getElementById('arrowRight');
-    arrowR.style.visibility = 'hidden';       
+    
 
     // Menu Selection
 
@@ -102,7 +103,8 @@ document.addEventListener('DOMContentLoaded', function(){
         const nAni = document.querySelector('#nameAnime');
         nAni.style.visibility = 'visible';
         nAni.innerHTML='Genre: Action';
-        let numpag=1;
+        const arrowL = document.getElementById('arrowLeft');
+        arrowL.style.visibility = 'hidden';
     }
 
     document.getElementById('Adventure').onclick = function(){
@@ -110,28 +112,35 @@ document.addEventListener('DOMContentLoaded', function(){
         const nAni = document.querySelector('#nameAnime');
         nAni.style.visibility = 'visible';
         nAni.innerHTML='Genre: Adventure';
-        let numpag=1;
+        const arrowL = document.getElementById('arrowLeft');
+        arrowL.style.visibility = 'hidden';
     }
+
     document.getElementById('Fantasy').onclick = function(){
         obtain('10','genre',0,8);
         const nAni = document.querySelector('#nameAnime');
         nAni.style.visibility = 'visible';
         nAni.innerHTML='Genre: Fantasy';
-        let numpag=1;
+        const arrowL = document.getElementById('arrowLeft');
+        arrowL.style.visibility = 'hidden';
     }
+
     document.getElementById('Magic').onclick = function(){
         obtain('16','genre',0,8);
         const nAni = document.querySelector('#nameAnime');
         nAni.style.visibility = 'visible';
         nAni.innerHTML='Genre: Magic';
-        let numpag=1;
+        const arrowL = document.getElementById('arrowLeft');
+        arrowL.style.visibility = 'hidden';
     }
+
     document.getElementById('Thriller').onclick = function(){
         obtain('41','genre',0,8);
         const nAni = document.querySelector('#nameAnime');
         nAni.style.visibility = 'visible';
         nAni.innerHTML='Genre: Thriller';
-        let numpag=1;
+        const arrowL = document.getElementById('arrowLeft');
+        arrowL.style.visibility = 'hidden';
     }
 
 
@@ -140,35 +149,44 @@ document.addEventListener('DOMContentLoaded', function(){
         const nAni = document.querySelector('#nameAnime');
         nAni.style.visibility = 'visible';
         nAni.innerHTML='Type: Tv';
-        let numpag=1;
+        const arrowL = document.getElementById('arrowLeft');
+        arrowL.style.visibility = 'hidden';
     }
+
     document.getElementById('Ova').onclick = function(){
         obtain('ova','type',0,8);
         const nAni = document.querySelector('#nameAnime');
         nAni.style.visibility = 'visible';
         nAni.innerHTML='Type: Ova';
-        let numpag=1;
+        const arrowL = document.getElementById('arrowLeft');
+        arrowL.style.visibility = 'hidden';
     }
+
     document.getElementById('Movie').onclick = function(){
         obtain('movie','type',0,8);
         const nAni = document.querySelector('#nameAnime');
         nAni.style.visibility = 'visible';
         nAni.innerHTML='Type: Movie';
-        let numpag=1;
+        const arrowL = document.getElementById('arrowLeft');
+        arrowL.style.visibility = 'hidden';
     }
+
     document.getElementById('Special').onclick = function(){
         obtain('special','type',0,8);
         const nAni = document.querySelector('#nameAnime');
         nAni.style.visibility = 'visible';
         nAni.innerHTML='Type: Special';
-        let numpag=1;
+        const arrowL = document.getElementById('arrowLeft');
+        arrowL.style.visibility = 'hidden';
     }
+
     document.getElementById('Music').onclick = function(){
         obtain('tv','type',0,8);
         const nAni = document.querySelector('#nameAnime');
         nAni.style.visibility = 'visible';
         nAni.innerHTML='Type: Music';
-        let numpag=1;
+        const arrowL = document.getElementById('arrowLeft');
+        arrowL.style.visibility = 'hidden';
     }
 
 
@@ -177,63 +195,80 @@ document.addEventListener('DOMContentLoaded', function(){
         const nAni = document.querySelector('#nameAnime');
         nAni.style.visibility = 'visible';
         nAni.innerHTML='Type: Score 1';
-        let numpag=1;
+        const arrowL = document.getElementById('arrowLeft');
+        arrowL.style.visibility = 'hidden';
     }
+
     document.getElementById('sc2').onclick = function(){
         obtain('2','score',0,8);
         const nAni = document.querySelector('#nameAnime');
         nAni.style.visibility = 'visible';
         nAni.innerHTML='Type: Score 2';
-        let numpag=1;
+        const arrowL = document.getElementById('arrowLeft');
+        arrowL.style.visibility = 'hidden';
     }
+
     document.getElementById('sc3').onclick = function(){
         obtain('3','score',0,8);
         const nAni = document.querySelector('#nameAnime');
         nAni.style.visibility = 'visible';
         nAni.innerHTML='Type: Score 3';
-        let numpag=1;
+        const arrowL = document.getElementById('arrowLeft');
+        arrowL.style.visibility = 'hidden';
     }
+
     document.getElementById('sc4').onclick = function(){
         obtain('4','score',0,8);
         const nAni = document.querySelector('#nameAnime');
         nAni.style.visibility = 'visible';
         nAni.innerHTML='Type: Score 4';
-        let numpag=1;
+        const arrowL = document.getElementById('arrowLeft');
+        arrowL.style.visibility = 'hidden';
     }
+
     document.getElementById('sc5').onclick = function(){
         obtain('5','score',0,8);
         const nAni = document.querySelector('#nameAnime');
         nAni.style.visibility = 'visible';
         nAni.innerHTML='Type: Score 5';
-        let numpag=1;
+        const arrowL = document.getElementById('arrowLeft');
+        arrowL.style.visibility = 'hidden';
     }
+
     document.getElementById('sc6').onclick = function(){
         obtain('6','score',0,8);
         const nAni = document.querySelector('#nameAnime');
         nAni.style.visibility = 'visible';
         nAni.innerHTML='Type: Score 6';
-        let numpag=1;
+        const arrowL = document.getElementById('arrowLeft');
+        arrowL.style.visibility = 'hidden';
     }
+
     document.getElementById('sc7').onclick = function(){
         obtain('7','score',0,8);
         const nAni = document.querySelector('#nameAnime');
         nAni.style.visibility = 'visible';
         nAni.innerHTML='Type: Score 7';
-        let numpag=1;
+        const arrowL = document.getElementById('arrowLeft');
+        arrowL.style.visibility = 'hidden';
     }
+
     document.getElementById('sc8').onclick = function(){
         obtain('8','score',0,8);
         const nAni = document.querySelector('#nameAnime');
         nAni.style.visibility = 'visible';
         nAni.innerHTML='Type: Score 8';
-        let numpag=1;
+        const arrowL = document.getElementById('arrowLeft');
+        arrowL.style.visibility = 'hidden';
     }
+
     document.getElementById('sc9').onclick = function(){
         obtain('9','score',0,8);
         const nAni = document.querySelector('#nameAnime');
         nAni.style.visibility = 'visible';
         nAni.innerHTML='Type: Score 9';
-        let numpag=1;
+        const arrowL = document.getElementById('arrowLeft');
+        arrowL.style.visibility = 'hidden';
     }
    
     document.getElementById('gender').onmouseover = function(){
